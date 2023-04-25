@@ -1,0 +1,40 @@
+{
+    "updateId":  {
+                     "provider":  "ADU-client",
+                     "name":  "rtos-update",
+                     "version":  "1.0.2.3"
+                 },
+    "isDeployable":  true,
+    "files":  [
+                  {
+                      "filename":  "firmware.bin",
+                      "sizeInBytes":  22604,
+                      "hashes":  {
+                                     "sha256":  "jkNVUTfeWE/cqqPKEhvkS++1OZjjHMe7nZD/wC/h+Sw="
+                                 }
+                  }
+              ],
+    "createdDateTime":  "2023-04-24T16:00:05.3448763Z",
+    "manifestVersion":  "4.0",
+    "compatibility": [
+        {
+          "manufacturer": "adu",
+          "model": "freertos"
+        }
+      ],
+      "instructions": {
+        "steps": [
+            {
+                "type":  "inline",
+                "description":  "Update freertos simulator",
+                "handler":  "microsoft/swupdate:2",
+                "files":  [
+                              "firmware.bin"
+                          ],
+                "handlerProperties":  {
+                                          
+                                      }
+            }
+        ]
+      }
+}
